@@ -36,3 +36,32 @@ function random(num: number) {
   }
   return num;
 }
+
+const colors = ["red", "orange", "yellow"];
+const upperCaseColors = colors.map((color) => {
+  return color.toUpperCase();
+});
+
+upperCaseColors;
+
+// A void function will return nothing which is null or undefined
+
+function printTwice(msg: string): void {
+  console.log(msg);
+  console.log(msg);
+  return "";
+}
+
+// Never type will ensure that the function never get a return and it useful to stop infinite loop situation
+
+function makeError(msg: string): never {
+  throw new Error(msg);
+  return "";
+}
+
+function gameLoop(): never {
+  while (true) {
+    console.log("Game Loop is Running!");
+  }
+}
+console.log(gameLoop());
