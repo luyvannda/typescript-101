@@ -45,11 +45,15 @@ type Song = {
 };
 
 function calculatePayout(song: Song): number {
-  return song.numStreams * 0.0033;
+  const payout = song.numStreams * 0.0033;
+
+  // this line of code round up number to 2 decimal places
+  const roundedPayout = payout.toFixed(2);
+  return +roundedPayout;
 }
 
 function printSong(song: Song): void {
-  console.log(`${song.title} – ${song.artist}`);
+  console.log(`${song.title} – by ${song.artist}`);
 }
 
 const mySong: Song = {
@@ -61,3 +65,8 @@ const mySong: Song = {
     writer: "Alex North"
   }
 };
+
+const earnings: string = `$${calculatePayout(mySong)}`;
+console.log(earnings);
+
+printSong(mySong);
