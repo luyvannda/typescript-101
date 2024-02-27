@@ -105,3 +105,39 @@ const linuxUser: User = {
 console.log(linuxUser.id);
 
 linuxUser.id = 3;
+
+// intersection types is a way to combine two or more types together using an ampersand '&'
+
+type Circle = {
+  radius: number;
+};
+
+type Colorful = {
+  color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+  radius: 7,
+  color: "green"
+};
+
+type Cat = {
+  numLives: number;
+};
+
+type Dog = {
+  breed: string;
+};
+
+type CatDog = Cat &
+  Dog & {
+    age: number;
+  };
+
+const Mina: CatDog = {
+  numLives: 3,
+  breed: "husky",
+  age: 5
+};
