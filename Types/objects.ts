@@ -71,6 +71,8 @@ console.log(earnings);
 
 printSong(mySong);
 
+// the question mark '?' is used to make a property optional so its type can be number || undefined
+
 type Point = {
   x: number;
   y: number;
@@ -87,3 +89,19 @@ const doubleCoordinate = (point: Point): Point => {
   return { x: point.x * 2, y: point.y * 2 };
 };
 console.log(doubleCoordinate(getCoordinate()));
+
+// readonly property cannot be changed or modified
+
+type User = {
+  readonly id: number;
+  username: string;
+};
+
+const linuxUser: User = {
+  id: 2,
+  username: "Joe Joe"
+};
+
+console.log(linuxUser.id);
+
+linuxUser.id = 3;
