@@ -18,21 +18,21 @@
 
 // printName({first: politician.first , last: politician.last});
 
-type Point = {
-  x: number;
-  y: number;
-};
+// type Point = {
+//   x: number;
+//   y: number;
+// };
 
-const getCoordinate = (): Point => {
-  return { x: 2, y: 4 };
-};
+// const getCoordinate = (): Point => {
+//   return { x: 2, y: 4 };
+// };
 
-console.log(getCoordinate());
+// console.log(getCoordinate());
 
-const doubleCoordinate = (point: Point): Point => {
-  return { x: point.x * 2, y: point.y * 2 };
-};
-console.log(doubleCoordinate(getCoordinate()));
+// const doubleCoordinate = (point: Point): Point => {
+//   return { x: point.x * 2, y: point.y * 2 };
+// };
+// console.log(doubleCoordinate(getCoordinate()));
 
 type Song = {
   title: string;
@@ -70,3 +70,20 @@ const earnings: string = `$${calculatePayout(mySong)}`;
 console.log(earnings);
 
 printSong(mySong);
+
+type Point = {
+  x: number;
+  y: number;
+  z?: number;
+};
+
+const getCoordinate = (): Point => {
+  return { x: 2, y: 4 };
+};
+
+console.log(getCoordinate());
+
+const doubleCoordinate = (point: Point): Point => {
+  return { x: point.x * 2, y: point.y * 2 };
+};
+console.log(doubleCoordinate(getCoordinate()));
