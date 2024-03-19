@@ -23,3 +23,13 @@ const coords: Point[] = [];
 coords.push({ x: 23, y: 8 });
 
 console.log(coords);
+
+// multi dimensional array
+
+const board: string[][] = [
+  ["X", "O", "O"],
+  ["O", "X", "X"],
+  ["X", "X", "O"],
+];
+
+const bingo: number[][][] = [[[1, 2, 3]]];
