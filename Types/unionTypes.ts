@@ -35,8 +35,8 @@ console.log(calculateTax(45, 0.7));
 // const nums: number[] = [1, 2, 3];
 // const stuff: any[] = [1, "a", true];
 
-const stuff: (number | string)[] = [1, 2, 3, "money"]; // use parenthesis to make that the array can hold both number or string
-let otherStuff: number[] | string[] = [2, 3, 4]; // this code means either is array of number or array of string but not both
+const stuff: (number | string)[] = [1, 2, 3, "money"]; // use parenthesis ensure that the array can hold both number and string
+let otherStuff: number[] | string[] = [2, 3, 4]; // this code means either is an array of number or an array of string but not both
 otherStuff = ["1", "2", "3"];
 console.log(otherStuff);
 
