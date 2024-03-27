@@ -31,3 +31,18 @@ function calculateTax(price: number | string, tax: number): number {
   return Number(result.toFixed(4)); // we use toFixed to limit the result to only 4 decimal places, however it will change result type to string, hence the need to convert it back to number.
 }
 console.log(calculateTax(45, 0.7));
+
+// const nums: number[] = [1, 2, 3];
+// const stuff: any[] = [1, "a", true];
+
+const stuff: (number | string)[] = [1, 2, 3, "money"]; // use parenthesis to make that the array can hold both number or string
+let otherStuff: number[] | string[] = [2, 3, 4]; // this code means either is array of number or array of string but not both
+otherStuff = ["1", "2", "3"];
+console.log(otherStuff);
+
+const coords: (Point | Loc)[] = [];
+coords.push({ x: 234, y: 521 });
+console.log(coords);
+
+coords.push({ lat: 123.487, long: 423.123 });
+console.log(coords);
