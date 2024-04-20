@@ -46,3 +46,14 @@ console.log(coords);
 
 coords.push({ lat: 123.487, long: 423.123 });
 console.log(coords);
+
+// Literal Types
+
+let mood: "Happy" | "Sad" = "Happy";
+mood = "Sad";
+mood = "Angry";
+
+type DayOfWeek = "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat" | "Sun";
+
+let today: DayOfWeek = "Sat";
+today = "Saturday";
